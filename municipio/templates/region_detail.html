@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+ 	<div>
+        <a class="btn btn-outline-dark" href="{% url 'municipio:region_edit' pk=reg.pk %}"><span class="glyphicon glyphicon-pencil">Editar</span></a>
+
+        <a class="btn btn-outline-danger" href="{% url 'municipio:region_delete' pk=reg.pk %}"><span class="glyphicon glyphicon-pencil">Borrar</span></a>
+
+        <a class="btn btn btn-outline-dark" href="{% url 'municipio:municipio_view' %}">Regresar <span class="sr-only">(current)</span></a>
+
+        <h2>{{ reg.codigo_r }}</h2>
+        <p class="texto">{{ reg.nombre_r }}</p>
+        
+    </div>
+{% endblock %}

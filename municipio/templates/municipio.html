@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for mun in muns %}
+
+ <div class="img-thumbnail">
+    <div class="mun">
+        {{ mun.codigo_m }}
+      <h2><a class="titul" href="{% url 'municipio:municipio_detail' mun.pk %}">{{ mun.nombre_m }}</a></h2>
+      <div>
+        <p class="texto">{{ mun.estado}}</p>
+      </div>  
+    
+    </div>
+  </div>  
+
+{% endfor %}
+
+<hr>
+<p> REGIONES  </p>
+<hr> <hr> <hr>
+
+{% for reg in regs %}
+
+ <div class="img-thumbnail">
+ 	<h2><a class="titul" href="{% url 'municipio:region_detail' reg.pk %}">{{ reg.nombre_r }}</a></h2>
+    <div class="reg">
+        {{ reg.codigo_r }}
+    
+    </div>
+  </div>  
+
+{% endfor %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+    <head>
+        <title>Talenta</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="#" class="titlefirst"> ¡¡¡ Municipios y regiones !!!</a></h1>
+            
+        <a class="btn btn-warning" href="{% url 'municipio:municipio_new' %}"><span class="glyphicon glyphicon-plus"></span>Crear Nuevo Municipio</a> 
+
+        <a class="btn btn-dark" href="{% url 'municipio:region_new' %}"><span class="glyphicon glyphicon-plus"></span>Crear Nuevo Region</a> 
+
+
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+
+    </body>
+
+</html>
+
