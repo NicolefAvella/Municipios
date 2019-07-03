@@ -1,0 +1,15 @@
+abc = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+entrada = input(('Escribe los numeros separados por espacios: ')).split()
+for i in range(len(entrada)):
+    entrada[i] = int(entrada[i])
+
+lista = []  #Para ir agregando la letra segun el numero 
+excel = list(abc) + [i+j for i in abc for j in abc] + [i+j+k for i in abc for j in abc for k in abc] #imprime todas las combinaciones
+
+for i in entrada:
+	if i != 0:
+		letra = excel[i-1]
+		lista.append(letra)
+print(lista)	
+
